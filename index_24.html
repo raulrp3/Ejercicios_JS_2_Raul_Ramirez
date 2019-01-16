@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>EJERCICIO 24</title>
+</head>
+<body>
+	<script>
+		window.onload = function(){
+			var number = parseInt(prompt("Introduce un número: "));
+			var x = 0,y = 1,z = 0;
+			var strResult = "";
+			if (number >= 1 && number <= 100){
+				strResult += x + "</br>";
+				for (var i = 0; i < (number -1); i++){
+					z = x + y;
+					strResult += z + "</br>";
+					y = x;
+					x = z;
+				}
+			}else{
+				alert("¡NÚMERO INCORRECTO!");
+			}
+			document.write(strResult);
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>EJERCICIO 17</title>
+</head>
+<body>
+	<script>
+		window.onload = function(){
+			var string = prompt("Introduce una frase:");
+			var strResult = "";
+			for (var i = 0; i < string.length; i++){
+				if (i == string.length - 1){
+					strResult += string.charAt(i);
+				}else{
+					strResult += string.charAt(i) + "-";
+				}
+			}
+			document.write(strResult);
+		}
+	</script>
+</body>
+</html>

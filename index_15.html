@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>EJERCICIO 15</title>
+</head>
+<body>
+	<script>
+		window.onload = function(){
+			var results = ['1','1','1','1','1','1','X','X','X','2'];
+			var strResult = "",number;
+			for (var i = 1; i <= 14; i++){
+				number = parseInt(Math.random() * 10);
+				strResult += "Resultado: " + results[number] + "</br>";
+			}
+			document.write(strResult);
+		}
+	</script>
+</body>
+</html>

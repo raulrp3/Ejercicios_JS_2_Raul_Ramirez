@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>EJERCICIO 21</title>
+</head>
+<body>
+	<script>
+		window.onload = function(){
+			var ispalindrome = "La frase NO es un palíndromo";
+			var string = prompt("Introduce una frase:");
+			var space = "",reverse = "";
+			for (var i = 0; i < string.length; i++){
+				if (string.charAt(i) != " "){
+					space += string.charAt(i);
+					reverse += string.charAt(i);
+				}
+			}
+			if (space == reverse){
+				ispalindrome = "La frase SÍ es un palíndromo";
+			}
+			document.write(ispalindrome);
+		}
+	</script>
+</body>
+</html>

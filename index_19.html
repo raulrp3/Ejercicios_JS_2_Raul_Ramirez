@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>EJERCICIO 19</title>
+</head>
+<body>
+	<script>
+		window.onload = function(){
+			var strResult = "",secondPosition;
+			var string = prompt("Intorduce una frase");
+			var firstPosition = string.indexOf("(");
+			if (firstPosition != -1){
+				secondPosition = string.indexOf(")");
+				if (secondPosition != -1){
+					strResult = string.substring(firstPosition + 1,secondPosition);
+				}else{
+					strResult = string.substring(firstPosition + 1,string.length);
+				}
+			}
+			document.write(strResult);
+		}
+	</script>
+</body>
+</html>

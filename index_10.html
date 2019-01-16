@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>EJERCICIO 10</title>
+</head>
+<body>
+	<script>
+		window.onload = function(){
+			var row = parseInt(prompt("Introduce el número de filas:"));
+			var col = parseInt(prompt("Introduce el número de columnas:"));
+			var number = row * col;
+			var drawtable = "<table border='1'>"
+			for (var i = row; i >= 1; i--){
+				drawtable += "<tr>";
+				for (var j = col; j >= 1; j--){
+					drawtable += "<td>" + number + "</td>";
+					number--;
+				}
+				drawtable += "</tr>";
+			}
+			drawtable += "</table>"
+			document.write(drawtable);
+		}
+	</script>
+</body>
+</html>

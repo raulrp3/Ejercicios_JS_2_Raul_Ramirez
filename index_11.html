@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>EJERCICIO 11</title>
+</head>
+<body>
+	<script>
+		window.onload = function(){
+			var age = new Array(3);
+			var name = new Array(3);
+			for (var i = 0;i < 3;i++){
+				age[i] = parseInt(prompt("Edad:"));
+				name[i] = prompt("Nombre:");
+			}
+			document.write("El mayor es: " + name[calcHigher(age)]);
+		}
+		function calcHigher(age){
+			var higher = age[0];
+			var position = 0;
+			for (var i = 1;i < age.length;i++){
+				if (age[i] > higher){
+					higher = age[i];
+					position = i;
+				}
+			}
+			return position;
+		}
+	</script>
+</body>
+</html>

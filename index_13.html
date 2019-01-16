@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>EJERCICIO 13</title>
+</head>
+<body>
+	<script>
+		window.onload = function(){
+			var numbers = new Array(3);
+			var used = new Array();
+			var number;
+			for (var i = 0; i < 3; i++){
+				number = parseInt(Math.random() * (99 - 1) + 1);
+				used.push(number);
+				while(used.indexOf(number) != -1){
+					number = parseInt(Math.random() * (99 - 1) + 1);
+				}
+				numbers[i] = number;
+			}
+			document.write(numbers);
+		}
+	</script>
+</body>
+</html>
