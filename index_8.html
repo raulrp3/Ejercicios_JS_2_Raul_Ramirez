@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>EJERCICIO 8</title>
+</head>
+<body>
+	<script>
+		window.onload = function(){
+			var number = prompt("Introduce un número:");
+			var result = "";
+			number = validate(number);
+			for (i = 1;i <= number; i++){
+				for (j = 0; j < i; j++){
+					result += i;
+				}
+				result += "</br>";
+			}
+			document.write(result);
+		}
+		function validate(number){
+			while(isNaN(number) || number > 50){
+				alert("¡ERROR!");
+				number = prompt("Introduce un número:");
+			}
+			return parseInt(number);
+		}
+	</script>
+</body>
+</html>

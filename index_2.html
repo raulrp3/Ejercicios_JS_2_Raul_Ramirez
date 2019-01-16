@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>EJERCICIO 2</title>
+</head>
+<body>
+	<script>
+		window.onload = function(){
+			var note = parseInt(prompt("Introduce una nota:"));
+			var strNote = "";
+			if (note >= 0 && note < 3){
+				strNote = "Muy deficiente";
+			}else if(note >= 3 && note < 5){
+				strNote = "Insuficiente";
+			}else if(note >= 5 && note < 6){
+				strNote = "Suficiente";
+			}else if(note >= 6 && note < 7){
+				strNote = "Bien";
+			}else if(note >= 7 && note < 9){
+				strNote = "Notable";
+			}else if(note >= 9 && note <= 10){
+				strNote = "Sobresaliente";
+			}
+			document.write("Nota: " + strNote);
+		}
+	</script>
+</body>
+</html>

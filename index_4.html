@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>EJERCICIO 4</title>
+</head>
+<body>
+	<script>
+		window.onload = function(){
+			var number = prompt("Introduce un número:");
+			var sum = 0;
+			if (number != "cancelar"){
+				number = validate(number);
+				while (true){
+					sum += number;
+					number = prompt("Introduce un número:");
+					if (number != "cancelar"){
+						number = validate(number);
+					}else{
+						break;
+					}
+				}
+				document.write("Total: " + sum);
+			}
+		}
+		function validate(number){
+			while(isNaN(number)){
+				alert("¡ERROR!");
+				number = prompt("Introduce un número:");
+			}
+			return parseInt(number);
+		}
+	</script>
+</body>
+</html>

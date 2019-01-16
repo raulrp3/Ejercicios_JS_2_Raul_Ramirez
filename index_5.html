@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>EJERCICIO 5</title>
+</head>
+<body>
+	<script>
+		window.onload = function(){
+			var letter;
+			number = prompt("DNI:");
+			number = validate(number);
+			letter = calcDni(number);
+			document.write("Letra del DNI " + number + ": " + letter);
+		}
+		function validate(number){
+			while(isNaN(number) || (number <= 0 || number > 99999999)){
+				alert("¡ERROR!");
+				number = prompt("Introduce un número:");
+			}
+			return parseInt(number);
+		}
+		function calcDni(number){
+			var letters = ['T','R','W','A','G','M','Y','F','P','D','X','B','N','J','Z','S','Q','V','H','L','C','K','E'];
+			var result = parseInt(number % 23);
+			return letters[result];
+		}
+	</script>
+</body>
+</html>

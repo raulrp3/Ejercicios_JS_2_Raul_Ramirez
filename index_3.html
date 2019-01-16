@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>EJERCICIO 3</title>
+</head>
+<body>
+	<script>
+		window.onload = function(){
+			var string = prompt("Introduce una cadena: ");
+			var result = "";
+			while (string != "cancelar"){
+				result += string + " - ";
+				string = prompt("Introduce una cadena");
+			}
+			document.write(result);
+		}
+	</script>
+</body>
+</html>
