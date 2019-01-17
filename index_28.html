@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>EJERCICIO 28</title>
+</head>
+<body>
+	<script>
+		window.onload = function(){
+			var price = parseInt(prompt("Precio: "));
+			var iva = prompt("IVA: ");
+			document.write(calcPrice(price,iva));
+		}
+		function calcPrice(price,iva){
+			var finalPrice = 0;
+			if (iva == ""){
+				iva = 21;
+			}
+			finalPrice = price + (price * (iva / 100));
+			return finalPrice;
+		}
+	</script>
+</body>
+</html>

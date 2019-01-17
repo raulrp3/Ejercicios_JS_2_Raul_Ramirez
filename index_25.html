@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>EJERCICIO 25</title>
+</head>
+<body>
+	<script>
+		window.onload = function(){
+			var choice = ["piedra","papel","tijera"];
+			var player = prompt("Piedra, papel o tijera: ");
+			var pc = Math.floor(Math.random() * 3);
+			player = player.toLowerCase();
+			document.write(playGame(player,choice[pc]));
+		}
+		function playGame(player,pc){
+			var result = "";
+			if (player == pc){
+				result = "EMPATE";
+			}else{
+				if (player == "piedra" && pc == "papel"){
+					result = "¡HAS PERDIDO! :(";
+				}
+				if (player == "piedra" && pc == "tijera"){
+					result = "¡HAS GANADO!"
+				}
+				if (player == "papel" && pc == "tijera"){
+					result = "¡HAS PERDIDO! :(";
+				}
+				if (player == "papel" && pc == "piedra"){
+					result = "¡HAS GANADO!"
+				}
+				if (player == "tijera" && pc == "papel"){
+					result = "¡HAS GANADO!"
+				}
+				if (player == "tijera" && pc == "piedra"){
+					result = "¡HAS PERDIDO! :(";
+				}
+			}
+			return result;
+		}
+	</script>
+</body>
+</html>

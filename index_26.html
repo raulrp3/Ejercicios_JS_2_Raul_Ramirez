@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>EJERCICIO 26</title>
+</head>
+<body>
+	<script>
+		window.onload = function(){
+			document.write(numberPI());
+		}
+		function numberPI(){
+			var pi = Math.PI + "";
+			var result = "";
+			for (var i = 0; i < 4; i++){
+				result += pi.charAt(i);
+			}
+			return result;
+		}
+	</script>
+</body>
+</html>

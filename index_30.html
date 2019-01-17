@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>EJERCICIO 30</title>
+</head>
+<body>
+	<script>
+		window.onload = function(){
+			var min = prompt("Número mínimo: ");
+			var max = prompt("Número máximo: ");
+			document.write(random(min,max));
+		}
+		function random(min,max){
+			var numberRandom;
+			if (min == ""){
+				min = 1;
+			}
+			if (max == ""){
+				max = 100;
+			}
+			numberRandom = Math.floor(Math.random() * (max - min));
+			return numberRandom;
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>EJERCICIO 31</title>
+</head>
+<body>
+	<script>
+		window.onload = function(){
+			var numbersRandom = random();
+			var strNumbers = "";
+			for (var i = 0; i < numbersRandom.length; i++){
+				strNumbers += "Número[" + i + "]: " + numbersRandom[i] + "</br>";
+			}
+			document.write(strNumbers);
+		}
+		function random(){
+			var number;
+			var numbers = new Array();
+			var used = new Array();
+			for (var i = 0; i < 100; i++){
+				number = parseInt(Math.random() * (1000 - 1) + 1)
+				while(used.indexOf(number) != -1){
+					number = parseInt(Math.random() * (1000 - 1) + 1);
+				}
+				numbers[i] = number;
+			}
+			return numbers;
+		}
+	</script>
+</body>
+</html>
