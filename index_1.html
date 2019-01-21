@@ -8,9 +8,17 @@
 	<script>
 		window.onload = function(){
 			var age = parseInt(prompt("Introduce una edad:"));
-			if (age > 18){
+			age = validate(age);
+			if (age >= 18){
 				document.write("¡Ya puedes conducir!");
 			}
+		}
+		function validate(number){
+			while(isNaN(number)){
+				alert("¡ERROR!");
+				number = prompt("Introduce un número:");
+			}
+			return parseInt(number);
 		}
 	</script>
 </body>

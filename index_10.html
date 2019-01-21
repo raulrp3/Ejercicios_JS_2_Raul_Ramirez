@@ -9,6 +9,8 @@
 		window.onload = function(){
 			var row = parseInt(prompt("Introduce el número de filas:"));
 			var col = parseInt(prompt("Introduce el número de columnas:"));
+			row = validate(row);
+			col = validate(col);
 			var number = row * col;
 			var drawtable = "<table border='1'>"
 			for (var i = row; i >= 1; i--){
@@ -21,6 +23,13 @@
 			}
 			drawtable += "</table>"
 			document.write(drawtable);
+		}
+		function validate(number){
+			while(isNaN(number)){
+				alert("¡ERROR!");
+				number = prompt("Introduce un número:");
+			}
+			return parseInt(number);
 		}
 	</script>
 </body>

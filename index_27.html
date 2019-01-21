@@ -8,15 +8,23 @@
 	<script>
 		window.onload = function(){
 			var dni = prompt("DNI: ");
+			dni = validate(dni);
 			document.write(dniLetter(dni));
 		}
 		function dniLetter(dni){
 			var letter = "";
 			var letters = ['T','R','W','A','G','M','Y','F','P','D','X','B','N','J','Z','S','Q','V','H','L','C','K','E'];
-			if (dni.length == 8 && dni > 0 && dni < 99999999){
-				letter = letters[parseInt(dni % 23)];
+			if (dni >0 && dni < 99999999){
+				letter = letters[dni % 23];
 			}
 			return letter;
+		}
+		function validate(number){
+			while(isNaN(number) || (number.length > 8)){
+				alert("¡ERROR!");
+				number = prompt("Introduce un número:");
+			}
+			return parseInt(number);
 		}
 	</script>
 </body>

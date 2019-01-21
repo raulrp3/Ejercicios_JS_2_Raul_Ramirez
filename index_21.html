@@ -7,17 +7,14 @@
 <body>
 	<script>
 		window.onload = function(){
-			var ispalindrome = "La frase NO es un palíndromo";
+			var ispalindrome = "SÍ es un palíndromo";
 			var string = prompt("Introduce una frase:");
-			var space = "",reverse = "";
-			for (var i = 0; i < string.length; i++){
-				if (string.charAt(i) != " "){
-					space += string.charAt(i);
-					reverse += string.charAt(i);
+			string = string.replace(/ /g,"");
+			for (var i = 0;i < string.length / 2;i++){
+				if (string.charAt(i) != string.charAt(string.length - 1 - i)){
+					ispalindrome = "NO es un palíndromo";
+					break;
 				}
-			}
-			if (space == reverse){
-				ispalindrome = "La frase SÍ es un palíndromo";
 			}
 			document.write(ispalindrome);
 		}

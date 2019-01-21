@@ -8,6 +8,7 @@
 	<script>
 		window.onload = function(){
 			var number = parseInt(prompt("Introduce un número: "));
+			number = validate(number);
 			var x = 0,y = 1,z = 0;
 			var strResult = "";
 			if (number >= 1 && number <= 100){
@@ -22,6 +23,13 @@
 				alert("¡NÚMERO INCORRECTO!");
 			}
 			document.write(strResult);
+		}
+		function validate(number){
+			while(isNaN(number)){
+				alert("¡ERROR!");
+				number = prompt("Introduce un número:");
+			}
+			return parseInt(number);
 		}
 	</script>
 </body>

@@ -9,6 +9,8 @@
 		window.onload = function(){
 			var min = prompt("Número mínimo: ");
 			var max = prompt("Número máximo: ");
+			min = validate(min);
+			max = validate(max);
 			document.write(random(min,max));
 		}
 		function random(min,max){
@@ -21,6 +23,13 @@
 			}
 			numberRandom = Math.floor(Math.random() * (max - min));
 			return numberRandom;
+		}
+		function validate(number){
+			while(isNaN(number)){
+				alert("¡ERROR!");
+				number = prompt("Introduce un número:");
+			}
+			return parseInt(number);
 		}
 	</script>
 </body>

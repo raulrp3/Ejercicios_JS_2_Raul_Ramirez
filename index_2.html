@@ -8,6 +8,7 @@
 	<script>
 		window.onload = function(){
 			var note = parseInt(prompt("Introduce una nota:"));
+			note = validate(note);
 			var strNote = "";
 			if (note >= 0 && note < 3){
 				strNote = "Muy deficiente";
@@ -23,6 +24,13 @@
 				strNote = "Sobresaliente";
 			}
 			document.write("Nota: " + strNote);
+		}
+		function validate(number){
+			while(isNaN(number)){
+				alert("¡ERROR!");
+				number = prompt("Introduce un número:");
+			}
+			return parseInt(number);
 		}
 	</script>
 </body>

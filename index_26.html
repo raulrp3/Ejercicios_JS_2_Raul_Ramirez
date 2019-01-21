@@ -10,12 +10,7 @@
 			document.write(numberPI());
 		}
 		function numberPI(){
-			var pi = Math.PI + "";
-			var result = "";
-			for (var i = 0; i < 4; i++){
-				result += pi.charAt(i);
-			}
-			return result;
+			return Math.PI.toFixed(2);
 		}
 	</script>
 </body>

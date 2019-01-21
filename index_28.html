@@ -9,6 +9,8 @@
 		window.onload = function(){
 			var price = parseInt(prompt("Precio: "));
 			var iva = prompt("IVA: ");
+			price = validate(price);
+			iva = validate(iva);
 			document.write(calcPrice(price,iva));
 		}
 		function calcPrice(price,iva){
@@ -18,6 +20,13 @@
 			}
 			finalPrice = price + (price * (iva / 100));
 			return finalPrice;
+		}
+		function validate(number){
+			while(isNaN(number)){
+				alert("¡ERROR!");
+				number = prompt("Introduce un número:");
+			}
+			return parseInt(number);
 		}
 	</script>
 </body>
