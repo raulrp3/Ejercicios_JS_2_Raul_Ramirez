@@ -7,13 +7,23 @@
 <body>
 	<script>
 		window.onload = function(){
-			var string = prompt("Introduce una cadena: ");
+			/*var string = prompt("Introduce una cadena: ");
 			var result = "";
 			while (string != "cancelar"){
 				result += string + " - ";
 				string = prompt("Introduce una cadena");
 			}
-			document.write(result);
+			document.write(result);*/
+			var string = "",strings = new Array();
+			while(true){
+				string = prompt("Introduce una cadena: ");
+				if (string == undefined){
+					break;
+				}else{
+					strings.push(string);
+				}
+			}
+			document.write(strings.join(' - '));
 		}
 	</script>
 </body>

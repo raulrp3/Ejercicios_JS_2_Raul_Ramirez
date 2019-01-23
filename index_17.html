@@ -9,14 +9,7 @@
 		window.onload = function(){
 			var string = prompt("Introduce una frase:");
 			var strResult = "";
-			for (var i = 0; i < string.length; i++){
-				if (i == string.length - 1){
-					strResult += string.charAt(i);
-				}else{
-					strResult += string.charAt(i) + "-";
-				}
-			}
-			document.write(strResult);
+			document.write(Array.from(string).join(' - '));
 		}
 	</script>
 </body>

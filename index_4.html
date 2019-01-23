@@ -7,21 +7,17 @@
 <body>
 	<script>
 		window.onload = function(){
-			var number = prompt("Introduce un número:");
-			var sum = 0;
-			if (number != "cancelar"){
-				number = validate(number);
-				while (true){
+			var sum = 0,number = 0;
+			while(true){
+				number = prompt("Introduce un número:");
+				if (number == undefined){
+					break;
+				}else{
+					number = validate(number);
 					sum += number;
-					number = prompt("Introduce un número:");
-					if (number != "cancelar"){
-						number = validate(number);
-					}else{
-						break;
-					}
 				}
-				document.write("Total: " + sum);
 			}
+			document.write("Total: " + sum);
 		}
 		function validate(number){
 			while(isNaN(number)){

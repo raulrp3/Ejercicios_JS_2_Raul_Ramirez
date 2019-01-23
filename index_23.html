@@ -7,17 +7,13 @@
 <body>
 	<script>
 		window.onload = function(){
-			var string =  prompt("Introduce una frase:");
-			var vowels = ['a','e','i','o','u'];
-			var position = new Array();
-			string = string.toLowerCase();
-			for (var i = 0; i < vowels.length; i++){
-				if (string.includes(vowels[i])){
-					position.push(string.indexOf(vowels[i]));
-				}
+			var string = prompt("Introduce una frase:");
+			var position = Array.from(string.toLowerCase()).findIndex((value) => value == 'a' || value == 'e' || value == 'i' || value == 'o' || value == 'u');
+			if (position == -1){
+				document.write("No hay vocales");
+			}else{
+				document.write(position);
 			}
-			position = position.sort();
-			document.write("La primera vocal aparece en la posición: " + position[0]);
 		}
 	</script>
 </body>
