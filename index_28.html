@@ -10,7 +10,6 @@
 			var price = parseInt(prompt("Precio: "));
 			var iva = prompt("IVA: ");
 			price = validate(price);
-			iva = validate(iva);
 			document.write(calcPrice(price,iva));
 		}
 		function calcPrice(price,iva){
@@ -18,6 +17,7 @@
 			if (iva == ""){
 				iva = 21;
 			}
+			iva = validate(iva);
 			finalPrice = price + (price * (iva / 100));
 			return finalPrice;
 		}

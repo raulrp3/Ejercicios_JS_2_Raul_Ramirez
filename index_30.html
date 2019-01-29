@@ -9,8 +9,6 @@
 		window.onload = function(){
 			var min = prompt("Número mínimo: ");
 			var max = prompt("Número máximo: ");
-			min = validate(min);
-			max = validate(max);
 			document.write(random(min,max));
 		}
 		function random(min,max){
@@ -21,6 +19,8 @@
 			if (max == ""){
 				max = 100;
 			}
+			min = validate(min);
+			max = validate(max);
 			numberRandom = Math.floor(Math.random() * (max - min));
 			return numberRandom;
 		}
